@@ -47,6 +47,6 @@ class bank:
     @staticmethod
     def sub(a,b):
         return a-b
-c1=bank('krishna',20005486123,1000)
+c1=bank('krishna',200054586123,1000)
 c1.main()
         
