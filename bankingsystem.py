@@ -26,25 +26,25 @@ class bank:
         else:
             print("invalid input")
             self.main()
-    def display(self):
+    def display(self):                                             # to display the details of the bank 
         print(f'BankName :{bank.bank_name}',f'Branck :{bank.branch}',f'Name : {self.c_name}',f'Account number : {self.acc_no}',sep="\n")
-    def balances(self):
+    def balances(self):                                            # to check for the balance
         print(f'Account Balance : {self.balance}')
-    def deposit(self):
+    def deposit(self):                                             # for adding amount into the account
         amount=int(input("Enter the amount to be deposited :Rs "))
         self.balance=self.add(self.balance,amount)
         print(f'Rs {amount} added successfull current balance :Rs {self.balance}')
-    def withdraw(self):
+    def withdraw(self):                                            # to withdraw amount from account
         amount=int(input("Enter the amount to withdraw :Rs "))
-        if self.balance >= amount :
+        if self.balance >= amount :                                 # check for the balance
             self.balance=self.sub(self.balance,amount)
             print(f'Rs {amount} withdraw successfull current balance :Rs {self.balance}')
         else:
             print(f'Your Balance is {self.balance} : insufficient balance to withdraw {amount}')
-    @staticmethod
+    @staticmethod                                                    # static method to add values
     def add(a,b):
         return a+b
-    @staticmethod
+    @staticmethod                                                    # static method to substract value
     def sub(a,b):
         return a-b
 c1=bank('krishna',200054586123,1000)
